@@ -49,7 +49,7 @@ export default function Home() {
             style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}
           >
             {/* The resume file should be placed in the public folder as resume.pdf */}
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="neon-btn">
+            <a href="public/resume.pdf" target="_blank" rel="noopener noreferrer" className="neon-btn">
               <span>Resume</span>
               <Download size={18} />
             </a>
