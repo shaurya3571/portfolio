@@ -4,37 +4,55 @@ import { ExternalLink, Github } from 'lucide-react';
 export default function Portfolio() {
   const projects = [
     {
-      title: 'NexGen Core System',
-      description: 'A cutting edge distributed microservices architecture handling high-throughput real-time data processing.',
-      tags: ['Node.js', 'Kafka', 'PostgreSQL', 'Docker'],
-      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80',
+      title: 'Personal Portfolio Website',
+      description: 'Designed and developed a responsive personal portfolio website to showcase my profile, skills, projects, and internship interests in a clean, recruiter-friendly format.',
+      tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
+      image: 'https://images.unsplash.com/photo-1507238692062-7f0ecfdb4f49?auto=format&fit=crop&w=600&q=80',
       github: '#',
-      demo: '#'
+      demo: '#',
+      codeText: 'Code',
+      demoText: 'Live Demo'
     },
     {
-      title: 'Quantum Analytics UI',
-      description: 'Futuristic data visualization dashboard allowing for multidimensional analysis of marketing datasets.',
-      tags: ['React', 'D3.js', 'Tailwind', 'Framer'],
+      title: 'Student Utility / College Management Project',
+      description: 'Built a project focused on simplifying student-related workflows through structured logic, clean interface design, and practical problem-solving.',
+      tags: ['Python', 'Flask', 'SQL', 'HTML', 'CSS'],
+      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80',
+      github: '#',
+      demo: '#',
+      codeText: 'Code',
+      demoText: 'View Details'
+    },
+    {
+      title: 'Data Analysis Dashboard',
+      description: 'Analyzed structured data to identify trends, generate insights, and present findings through visualizations and summary-based reporting.',
+      tags: ['Python', 'Pandas', 'Excel', 'Matplotlib', 'Data Analysis'],
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
       github: '#',
-      demo: '#'
+      demo: '#',
+      codeText: 'Code',
+      demoText: 'View Details'
     },
     {
-      title: 'Aegis Security Module',
-      description: 'Zero-trust authentication and authorization framework capable of integrating into legacy enterprise apps via OAuth.',
-      tags: ['Go', 'Redis', 'JWT', 'gRPC'],
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80',
+      title: 'Frontend Landing Page / UI Project',
+      description: 'Created a modern and responsive frontend interface with focus on clean design, usability, and smooth user experience across devices.',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Figma', 'Responsive Design'],
+      image: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=600&q=80',
       github: '#',
-      demo: '#'
+      demo: '#',
+      codeText: 'Code',
+      demoText: 'Live Demo'
     },
     {
-        title: 'Neural Network Optimizer',
-        description: 'An AI-powered tool that automatically compresses and optimizes neural networks for edge deployment.',
-        tags: ['Python', 'TensorFlow', 'ONNX', 'C++'],
-        image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80',
-        github: '#',
-        demo: '#'
-      }
+      title: 'Business Analysis Case Study',
+      description: 'Worked on understanding a business problem, identifying requirements, analyzing possible improvements, and presenting a structured solution approach.',
+      tags: ['Business Analysis', 'Research', 'Documentation', 'Process Thinking', 'Presentation'],
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80',
+      github: '#',
+      demo: '#',
+      codeText: 'View Case Study',
+      demoText: 'View Details'
+    }
   ];
 
   return (
@@ -45,9 +63,9 @@ export default function Portfolio() {
         transition={{ duration: 0.5 }}
         style={{ textAlign: 'center', marginBottom: '4rem' }}
       >
-        <h1 className="text-gradient" style={{ fontSize: '3rem', marginBottom: '1rem' }}>Selected Works</h1>
+        <h1 className="text-gradient" style={{ fontSize: '3rem', marginBottom: '1rem' }}>Featured Projects</h1>
         <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
-          A showcase of systems, interfaces, and products I have designed and engineered.
+          A selection of projects that reflect my interest in analysis, development, problem-solving, and user-focused solutions.
         </p>
       </motion.div>
 
@@ -115,12 +133,12 @@ export default function Portfolio() {
               </div>
 
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <a href={project.github} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)' }} aria-label="GitHub">
-                  <Github size={20} className="hover-glow" />
-                  <span style={{ fontSize: '0.9rem' }}>Code</span>
+                <a href={project.github} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)' }} aria-label={project.codeText}>
+                  {project.codeText === 'Code' ? <Github size={20} className="hover-glow" /> : <ExternalLink size={20} className="hover-glow" />}
+                  <span style={{ fontSize: '0.9rem' }}>{project.codeText}</span>
                 </a>
-                <a href={project.demo} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--neon-cyan)' }} aria-label="Live Demo">
-                  <span style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Live Demo</span>
+                <a href={project.demo} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--neon-cyan)' }} aria-label={project.demoText}>
+                  <span style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>{project.demoText}</span>
                   <ExternalLink size={20} />
                 </a>
               </div>

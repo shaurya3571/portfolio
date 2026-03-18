@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { Code2, Database, Layout, Terminal } from 'lucide-react';
+import { Code2, LineChart, Monitor, Users } from 'lucide-react';
 
 export default function About() {
   const skills = [
-    { name: 'Frontend Development', icon: <Layout className="text-gradient" size={32} />, skills: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Framer Motion'] },
-    { name: 'Backend Systems', icon: <Database className="text-gradient" size={32} />, skills: ['Node.js', 'Express', 'Python', 'PostgreSQL', 'MongoDB'] },
-    { name: 'Core Architecture', icon: <Code2 className="text-gradient" size={32} />, skills: ['System Design', 'API Development', 'Microservices', 'GraphQL'] },
-    { name: 'Tools & DevOps', icon: <Terminal className="text-gradient" size={32} />, skills: ['Git', 'Docker', 'AWS', 'CI/CD'] },
+    { name: 'Programming & Development', icon: <Code2 className="text-gradient" size={32} />, skills: ['Python', 'C++', 'HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'] },
+    { name: 'Business & Data', icon: <LineChart className="text-gradient" size={32} />, skills: ['Business Analysis', 'Data Analysis', 'Process Understanding', 'Research', 'Documentation', 'Problem Solving'] },
+    { name: 'Tools & Platforms', icon: <Monitor className="text-gradient" size={32} />, skills: ['Excel', 'Figma', 'VS Code', 'Canva', 'PowerPoint', 'Frontend Projects'] },
+    { name: 'Professional Strengths', icon: <Users className="text-gradient" size={32} />, skills: ['Communication', 'Leadership', 'Teamwork', 'Event Coordination', 'Adaptability', 'Time Management'] },
   ];
 
   return (
@@ -19,8 +19,7 @@ export default function About() {
       >
         <h1 className="text-gradient" style={{ fontSize: '3rem', marginBottom: '1rem' }}>About Me</h1>
         <p style={{ color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto', fontSize: '1.1rem' }}>
-          I am a passionate software engineering student exploring in the field of cybersecurity , webdev and devops, learning programming languages and chasing skills.
-        </p>
+          I’m a Computer Science student at SRM Institute of Science and Technology, passionate about Business Analysis, Data Analysis, Python, and Frontend Development. I enjoy solving practical problems, learning through projects, and building skills that create real-world impact.        </p>
       </motion.div>
 
       {/* Experience Timeline or Bio Grid */}
@@ -48,12 +47,12 @@ export default function About() {
           className="glass-panel"
           style={{ padding: '2rem' }}
         >
-          <h3 style={{ color: 'var(--neon-purple)', marginBottom: '1rem', fontSize: '1.5rem' }}>Philosophy</h3>
+          <h3 style={{ color: 'var(--neon-purple)', marginBottom: '1rem', fontSize: '1.5rem' }}>What I Focus on</h3>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-            I believe that great software is indistinguishable from magic. It should not only function flawlessly but also delight the user through beautiful aesthetics and smooth interactions.
+            I am currently focused on building a strong foundation in business analysis, data analysis, frontend development, and Python-based problem solving. I enjoy understanding requirements, improving processes, and creating solutions that are both useful and user-friendly.
           </p>
           <p style={{ color: 'var(--text-secondary)' }}>
-            Performance is a feature, and I architect applications with that principle from day one.
+            I believe strong work comes from combining clear thinking, communication, consistency, and execution. My goal is to grow through meaningful internships and projects where I can learn fast and contribute with impact.
           </p>
         </motion.div>
       </div>
@@ -64,7 +63,7 @@ export default function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <h2 style={{ textAlign: 'center', marginBottom: '3rem', fontSize: '2.5rem' }}>Core <span className="text-gradient">Expertise</span></h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '3rem', fontSize: '2.5rem' }}>Core <span className="text-gradient">Skills</span></h2>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
           {skills.map((area, i) => (

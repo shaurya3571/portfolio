@@ -20,7 +20,7 @@ export default function Home() {
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <h2 style={{ color: 'var(--neon-cyan)', letterSpacing: '4px', textTransform: 'uppercase', fontSize: '1rem', marginBottom: '1rem' }} className="glow-text">
-              Welcome to the future
+              OPEN TO INTERNSHIP OPPORTUNITIES
             </h2>
             <h1 style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', lineHeight: '1.1', marginBottom: '1.5rem', fontWeight: '800' }}>
               Hi, I'm <br />
@@ -28,14 +28,19 @@ export default function Home() {
             </h1>
           </motion.div>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem auto' }}
+            style={{ marginBottom: '3rem', maxWidth: '700px', margin: '0 auto 3rem auto' }}
           >
-            @SRM KTR CSE | Networking and communication | Python ,C++. Python, Frontend Web-dev
-          </motion.p>
+            <p style={{ fontSize: '1.3rem', color: 'var(--text-primary)', marginBottom: '1rem', fontWeight: '500' }}>
+              Computer Science student at SRM University focused on Business Analysis, Data Analysis, Python, and Frontend Development
+            </p>
+            <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+              I build practical, user-focused solutions by combining analytical thinking, problem solving, communication, and development skills. I’m currently looking for internships where I can learn, contribute, and grow through real-world projects.
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -45,7 +50,7 @@ export default function Home() {
           >
             {/* The resume file should be placed in the public folder as resume.pdf */}
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="neon-btn">
-              <span>View Resume</span>
+              <span>Resume</span>
               <Download size={18} />
             </a>
             <Link to="/portfolio" className="neon-btn" style={{ background: 'transparent', border: '1px solid var(--text-secondary)', color: 'var(--text-primary)' }}>
